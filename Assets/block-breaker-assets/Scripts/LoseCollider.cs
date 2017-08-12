@@ -1,5 +1,6 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class LoseCollider : MonoBehaviour {
 
@@ -12,11 +13,6 @@ public class LoseCollider : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D collision){
 		print("Collision");
-//		levelManager.LoadLevel("Win Screen");
-	}
-
-	// Update is called once per frame
-	void Update () {
-		
+		levelManager.LoadLevel("Win Screen");
 	}
 }
