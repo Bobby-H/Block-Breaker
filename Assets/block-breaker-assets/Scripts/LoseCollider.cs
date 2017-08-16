@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class LoseCollider : MonoBehaviour {
 
+	public LevelManager levelManager;
+
 	// Use this for initialization
 	void OnTriggerEnter2D(Collider2D trigger){
 		print("Trigger");
 	}
+
 	void OnCollisionEnter2D(Collision2D collision){
 		print("Collision");
-	}
-	// Update is called once per frame
-	void Update () {
-		
+		levelManager.LoadLevel("Win Screen");
 	}
 }
