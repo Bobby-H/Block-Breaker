@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Collections; //trying to resolve transform.position error
 
 public class Paddle : MonoBehaviour {
 	
@@ -15,6 +16,6 @@ public class Paddle : MonoBehaviour {
 
 		print(Input.mousePosition.x / Screen.width * 16);
 
-//		this.transform.posistion = paddlePos;
+		this.transform.position = paddlePos;
 	}
 }
