@@ -12,9 +12,11 @@ public class Paddle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Vector3 paddlePos = new Vector3 (0.5f, 0f, 0f);
+		Vector3 paddlePos = new Vector3 (0.5f, this.transform.position.y, 0f);
 
-		print(Input.mousePosition.x / Screen.width * 16);
+		float mousePosInBlocks = Input.mousePosition.x / Screen.width * 16;
+
+		paddlePos.x = mousePosInBlocks;
 
 		this.transform.position = paddlePos;
 	}
