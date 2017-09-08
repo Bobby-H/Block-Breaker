@@ -19,5 +19,10 @@ public class Brick : MonoBehaviour {
 
 	void OnCollisionEnter2D (Collision2D col){
 		timesHit++;
+		SimulateWin();
+	}
+	//TODO Remove this method once we can actually win!
+	void SimulateWin() {
+		LevelManager.LoadNextLevel();
 	}
 }
